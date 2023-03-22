@@ -1,0 +1,2 @@
+select city,length(city) from station t2 where length(t2.city) in (select min(length(city)) from station) order by t2.city limit 1;
+select city, length(city) from station t1 where length(t1.city) in (select max(length(city)) from station) order by t1.city limit 1;
